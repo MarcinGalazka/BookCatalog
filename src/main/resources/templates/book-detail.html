@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"> <head>
+    <meta charset="UTF-8">
+    <title>BookCatalog</title>
+    <link rel="stylesheet"          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script type='text/javascript' src='/js/bootstrap.min.js'></script>
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">BookCatalog</span>
+</nav> <br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Book Detail</h5>
+        </div>
+    </div>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td > title</td>
+            <td th:text="${book.title}" />
+
+        </tr>
+        <tr>
+            <td > author</td>
+            <td th:text="${book.author}" />
+        </tr>
+        <tr>
+            <td > year</td>
+            <td th:text="${book.year}" />
+        </tr>
+        <tr>
+            <td > description</td>
+            <td th:text="${book.description}" />
+
+        </tr>
+
+    </table>
+
+    <a th:href="@{/book-list}">
+        <button type="button" class="btn btn-pill btn-primary">Back to books list</button></a>
+</div>
+</body>
+</html>
